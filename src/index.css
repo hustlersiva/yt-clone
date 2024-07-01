@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+    .new-effect{
+        @apply transition-transform duration-300 ease-in-out transform hover:scale-x-105 hover:shadow-md hover:border-2 hover:border-yt-white
+    }
+}
+
+
+
+
+
