@@ -32,7 +32,7 @@ const Navbar = () => {
       console.error("Error signing out:", error);
     }
   };
-  console.log(userdata);
+  // console.log(userdata);
   return (
     <nav className="bg-yt-black h-14 flex items-center justify-between fixed w-full px-4 z-10">
       <div className="flex items-center space-x-4">

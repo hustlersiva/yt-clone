@@ -12,7 +12,7 @@ const formatDuration = (isoDuration) => {
     : `${minutes}:${seconds}`;
 };
 
-const formatViewCount = (count) => {
+export const formatViewCount = (count) => {
   if (count < 1000) return count.toString();
   if (count < 1000000) return (count / 1000).toFixed(1) + "K";
   if (count < 1000000000) return (count / 1000000).toFixed(1) + "M";
@@ -36,7 +36,7 @@ const Video = ({
           alt=""
           className="h-full w-full overflow-hidden rounded-2xl"
         />
-        <div className="absolute bg-yt-black text-yt-white rounded-md bottom-2 right-2 p-1">
+        <div className="absolute bg-yt-black text-yt-white rounded-md bottom-6 right-1 p-1 font-semibold text-xs ">
           {formatDuration(duration)}
         </div>
       </div>

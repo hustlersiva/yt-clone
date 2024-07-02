@@ -27,6 +27,7 @@ const Home = () => {
         const channelResponse = await axios.get(channelUrl);
         const channelDetails = channelResponse.data.items[0].snippet;
         const channelStatistics = channelResponse.data.items[0].statistics;
+        console.log(channelStatistics);
 
         // Construct video data object
         const videoData = {
@@ -43,6 +44,8 @@ const Home = () => {
           subscribers: channelStatistics.subscriberCount,
           videoUrl: `https://www.youtube.com/watch?v=${videoId}`,
           timestamp: timestamp,
+          likeCount: statistics.likeCount,
+          dislikeCount: statistics.dislikeCount || "Not Available",
         };
 
         // Save to Firestore
